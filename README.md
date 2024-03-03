@@ -6,10 +6,10 @@ This repository contains jupyter notebook and data for exploring an air quality 
 
 ## **Dataset Overview**
 
-- [Description]
+- **[Description]**</br>
   This dataset is an air quality observation from different stations in China. It icludes information of air pollutants as well as meteorological parameters.
   
-- [Variables]
+- **[Variables]**
     - SO2: Sulfur dioxide concentration
     - NO2: Nitrogen dioxide concentration
     - CO: Carbon monoxide concentration
