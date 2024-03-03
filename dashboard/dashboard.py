@@ -8,16 +8,16 @@ import streamlit_antd_components as sac
 import streamlit_shadcn_ui as ui
 
 #Dataset
-air_quality = pd.read_csv('air_quality_merge.csv')
+air_quality = pd.read_csv('dashboard/air_quality_merge.csv')
 air_quality.rename(columns={
     'wd': 'WIND_DIRECTION',
     'WSPM': 'WIND_SPEED'
     }, inplace=True)
 
-pollutant_mean = pd.read_csv('pollutant_mean.csv')
+pollutant_mean = pd.read_csv('dashboard/pollutant_mean.csv')
 pollutant_mean[['SO2', 'NO2', 'CO', 'O3', 'pollutant_level']] = pollutant_mean[['SO2', 'NO2', 'CO', 'O3', 'pollutant_level']].apply(lambda x: x.round(2))
-temp_by_station = pd.read_csv('temp.csv')
-rain_by_station = pd.read_csv('rain.csv')
+temp_by_station = pd.read_csv('dashboard/temp.csv')
+rain_by_station = pd.read_csv('dashboard/rain.csv')
 
 # Title
 st.title("Air Quality Analysis Dashboard")
@@ -112,7 +112,7 @@ elif tabs == 'Analytics':
                 """
             )
         with st.expander('Show correlation matrix plot'):
-            st.image('corr.png')
+            st.image('dashboard/corr.png')
             st.markdown(
                 """
                 Legends:
@@ -135,10 +135,10 @@ elif tabs == 'Analytics':
                 """
             )
         with st.expander('Show graph'):
-            st.image('pollutants.png')
+            st.image('dashboard/pollutants.png')
     elif segment == 'Time Series':
         pollutant_means_over_years = air_quality.groupby('Year')[['SO2', 'NO2', 'O3']].mean()
-        st.image('time series.png')
+        st.image('dashboard/time series.png')
         with st.expander('Show explanation', expanded=True):
             st.markdown(
                 """
