@@ -32,3 +32,6 @@ This repository contains jupyter notebook and data for exploring an air quality 
 
 Dashboard created with streamlit library and deployed in streamlit community cloud. </br>
 [-> Air Quality Analysis Dashboard <-](URL)
+
+## Disclaimer
+This project is part of Dicoding Academy's project data analysis submission and not for commercial purposes.
